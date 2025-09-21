@@ -27,8 +27,8 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="?attr/colorPrimary"
-                app:titleTextColor="@android:color/white" />
+                android:background="@color/brown"
+                app:titleTextColor="@color/white" />
         </com.google.android.material.appbar.AppBarLayout>
 
         <!-- NavHost Fragment (Navigation Component) -->
@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:background="@color/white"
             app:itemIconTint="@null"
-            app:itemTextColor="@color/bottom_nav_color"
+            app:itemTextColor="@color/brown"
             app:menu="@menu/bottom_nav_menu"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
