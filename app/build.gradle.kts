@@ -15,6 +15,11 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        // ✅ Tambahin ini
+        vectorDrawables {
+            useSupportLibrary = true
+        }
     }
 
     buildTypes {
