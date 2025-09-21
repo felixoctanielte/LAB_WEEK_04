@@ -22,13 +22,20 @@ class CafeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val viewPager = view.findViewById<ViewPager2>(R.id.view_pager)
-        val tabLayout = view.findViewById<TabLayout>(R.id.tab_layout)
-        val adapter = CafeAdapter(childFragmentManager, lifecycle)
+        val tabLayout = view.findViewById<TabLayout>(R.id.tab_layout) // <- sesuai XML
 
+        val adapter = CafeAdapter(this)
         viewPager.adapter = adapter
 
+        val tabTitles = listOf(
+            getString(R.string.starbucks_title),
+            getString(R.string.janjijiwa_title),
+            getString(R.string.kopikenangan_title)
+        )
+
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
-            tab.text = resources.getString(TABS_FIXED[position])
+            tab.text = tabTitles[position]
         }.attach()
     }
+
 }
